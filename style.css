@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.container {
+  min-height: 100vh;
+  /* background-color: beige; */
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-flow: row wrap;
+  background-image: linear-gradient(to right bottom, lightgreen, lightblue);
+}
+.card {
+  background-color: black;
+  height: 400px;
+  border-radius: 20px;
+  position: relative;
+  box-shadow: 3px 3px 10px 4px rgba(black);
+  margin: 30px;
+}
+.card h1 {
+  color: white;
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  opacity: 0;
+  transition: all 0.5s;
+}
+.card-1 {
+  flex: 0 0 400px;
+  background-image: url(./christopher-campbell-rDEOVtE7vOs-unsplash.jpg);
+  transition: all 0.5s;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 10px 10px 20px 20px rgba(black);
+}
+.card::before {
+  content: "";
+  position: absolute;
+  width: 90%;
+  height: 90%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 20px;
+  opacity: 0;
+  border: 2px solid white;
+  transition: all 0.5s;
+}
+.card:hover {
+  cursor: pointer;
+  background-image: url(./christopher-campbell-rDEOVtE7vOs-unsplash.jpg);
+  background-position: left;
+  background-size: cover;
+}
+.card:hover::before {
+  opacity: 1;
+}
+.card:hover h1 {
+  opacity: 1;
+}
+.card-2 {
+  flex: 0 0 400px;
+  background-image: url(./sergio-de-paula-c_GmwfHBDzk-unsplash.jpg);
+  transition: all 0.5s;
+  background-size: cover;
+  background-position: center;
+}
+.card-2:hover {
+  cursor: pointer;
+  background-image: url(./sergio-de-paula-c_GmwfHBDzk-unsplash.jpg);
+  background-position: left;
+  background-size: cover;
+}
+
+.card-3 {
+  flex: 0 0 400px;
+  background-image: url(./atikh-bana-_KaMTEmJnxY-unsplash.jpg);
+  transition: all 0.5s;
+  background-size: cover;
+  background-position: center;
+}
+.card-3:hover {
+  cursor: pointer;
+  background-image: url(./atikh-bana-_KaMTEmJnxY-unsplash.jpg);
+  background-position: left;
+  background-size: cover;
+}
+@media (max-width: 500px) {
+  .card {
+    flex: 0 0 300px;
+  }
+}
